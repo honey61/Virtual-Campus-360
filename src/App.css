@@ -1,0 +1,112 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Base Styles */
+.checkpoint-bar {
+  position: relative;
+  width: 100%;
+}
+
+.custom-dropdown {
+  position: relative;
+  width: 100%; /* Ensure the dropdown scales with its container */
+}
+
+.dropdown-header {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #f0f0f0;
+  font-size: 1rem; /* Use relative units for better scalability */
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  z-index: 1000; /* Prevent overlapping issues */
+}
+
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .dropdown-header {
+    padding: 8px;
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+
+  .dropdown-item {
+    padding: 8px;
+    font-size: 0.9rem; /* Adjust font size */
+  }
+
+  .dropdown-list {
+    width: auto; /* Ensure it adapts to smaller containers */
+  }
+}
+
+@media (max-width: 480px) {
+  .dropdown-header {
+    padding: 6px;
+    font-size: 0.8rem; /* Further adjust for very small screens */
+  }
+
+  .dropdown-item {
+    padding: 6px;
+    font-size: 0.8rem;
+  }
+
+  .dropdown-list {
+    width: 100%; /* Ensure it takes full width on small screens */
+  }
+}
